@@ -1,0 +1,116 @@
+<!-- <!doctype html>
+<html lang="es">
+
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Acceder a la ubicación del dispositivo con JavaScript">
+	<meta name="author" content="Parzibyte">
+	<title>Acceder a la ubicación del dispositivo con JavaScript</title>
+	
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	 crossorigin="anonymous">
+     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+</head>
+
+<body>
+
+	<main role="main" class="container">
+		<div class="row">
+	
+			<div class="col-12">
+				<h1>Acceder a la ubicación con JavaScript</h1>
+				<a href="//parzibyte.me/blog" target="_blank">By Parzibyte</a>
+				<br>
+				<strong>Latitud: </strong> <p id="latitud"></p>
+				<br>
+				<strong>Longitud: </strong> <p id="longitud"></p>
+				<br>
+				<a target="_blank" id="enlace" href="#">Abrir en Google Maps</a>
+			</div>
+		</div>
+	</main>
+    <div id ="map"> </div> 
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_cjEBFdzKIl8YAxAr9eUqdbaGtczRO5s&callback=initMap&libraries=&v=weekly" async defer></script>
+	
+	<script src="main.js">
+	</script>
+</body>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Quick Start - Leaflet</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+
+
+	
+</head>
+<body>
+
+
+
+<div id="map" style="width: 600px; height: 400px;"></div>
+<script>
+
+	var mymap = L.map('map').setView([51.505, -0.09], 13);
+
+	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+		maxZoom: 18,
+		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, ' +
+			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		id: 'mapbox/streets-v11',
+		tileSize: 512,
+		zoomOffset: -1
+	}).addTo(mymap);
+
+	L.marker([51.5, -0.09]).addTo(mymap);
+</script>
+
+
+  /*
+const funcionInit = () => {
+	if (!"geolocation" in navigator) {
+ 		return alert("Tu navegador no soporta el acceso a la ubicación. Intenta con otro");
+ 	}
+
+ 	const onUbicacionConcedida = ubicacion => {
+ 		 console.log("Tengo la ubicación: ", ubicacion);
+ 		 const coordenadas = ubicacion.coords;
+          $latitud.innerText= coordenadas.latitude;
+ 		 $longitud.innerText = coordenadas.longitude;
+         console.log("=>"+coordenadas.latitude+"  =>"+coordenadas.longitude);
+ 		 $enlace.href = `https://api.openweathermap.org/data/2.5/weather?lat=${$latitud.value}&lon=${$longitud.value}&appid=87e4f01705095dec0164761d3cb63252`;
+ 	}
+ 	const onErrorDeUbicacion = err => {
+
+ 		$latitud.innerText = "Error obteniendo ubicación: " + err.message;
+ 		$longitud.innerText = "Error obteniendo ubicación: " + err.message;
+ 		console.log("Error obteniendo ubicación: ", err);
+ 	}
+
+ 	const opcionesDeSolicitud = {
+		enableHighAccuracy: true, // Alta precisión
+ 		maximumAge: 0, // No queremos caché
+ 		timeout: 5000 // Esperar solo 5 segundos
+	};
+
+ 	$latitud.innerText = "Cargando...";
+ 	$longitud.innerText = "Cargando...";
+ 	navigator.geolocation.getCurrentPosition(onUbicacionConcedida, onErrorDeUbicacion, opcionesDeSolicitud);
+
+ };
+ document.addEventListener("DOMContentLoaded", funcionInit);
+ */

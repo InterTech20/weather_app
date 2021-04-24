@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Weather app</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+
+</head>
+<body>
+    <!-- <h1>Acceder a la ubicación con JavaScript</h1> -->
+<div class="container_app">
+    <div class="item1">
+        <div id="map" ></div>
+             
+    </div>
+    <div class="item2">
+        <div class="data_clima_header">
+            <div class="date"></div>
+            <div class="location"><span id="map_marker"></span>
+                <i class="fas fa-map-marker-alt"></i> </div>    
+        </div>
+
+        <div class="data_clima_contaniner" >
+            <div class="data_clima_contaniner_item1" id="owl_1">
+                <span class="data_clima_item1"></span>
+                <span class="data_clima_item2"></span>
+                <span class="data_clima_item3">
+                    <span id="temp_max"></span>
+                    <span id="temp_min"></span>
+                </span>
+                <span class="data_clima_item4"></span>
+                <span class="data_clima_item5"></span>
+                <span class="data_clima_item6"></span>
+                <span class="data_clima_item7"></span>
+                <span class="data_clima_item8"></span>
+                <span class="data_clima_item9"></span>
+                <span class="data_clima_item10"></span>
+                <span class="data_clima_item11"></span>
+                <span class="data_clima_item12"></span>
+
+            </div>
+            <div class="data_clima_contaniner_item2" id="owl_2">
+                <span class="data_clima_item1"></span>
+                <span class="data_clima_item2"></span>
+                <span class="data_clima_item3">
+                    <span id="temp_max"></span>
+                    <span id="temp_min"></span>
+                </span>
+                <span class="data_clima_item4"></span>
+                <span class="data_clima_item5"></span>
+                <span class="data_clima_item6"></span>
+                <span class="data_clima_item7"></span>
+                <span class="data_clima_item8"></span>
+                <span class="data_clima_item9"></span>
+                <span class="data_clima_item10"></span>
+                <span class="data_clima_item11"></span>
+                <span class="data_clima_item12"></span>
+
+            </div>
+            <div class="data_clima_contaniner_item3" id="owl_3">
+                <span class="data_clima_item1"></span>
+                <span class="data_clima_item2"></span>
+                <span class="data_clima_item3">
+                    <span id="temp_max"></span>
+                    <span id="temp_min"></span>
+                </span>
+                <span class="data_clima_item4"></span>
+                <span class="data_clima_item5"></span>
+                <span class="data_clima_item6"></span>
+                <span class="data_clima_item7"></span>
+                <span class="data_clima_item8"></span>
+                <span class="data_clima_item9"></span>
+                <span class="data_clima_item10"></span>
+                <span class="data_clima_item11"></span>
+                <span class="data_clima_item12"></span>
+
+            </div>
+        </div>
+
+        
+        
+        <div class="data_clima_footer">
+            <span class="item_slider1 "></span>
+            <span class="item_slider2 "></span>
+            <span class="item_slider3 "></span>
+            <span class="item_slider4"></span>
+        </div>
+
+        
+        <!-- <strong>Latitud: <p id="latitud"></p></strong> 
+    
+        <strong>Longitud:  <p id="longitud"></p></strong> -->
+  
+<!-- <span id="data"></span> -->
+    </div>
+    <!--  -->
+    <!--  -->
+</div>
+
+<script src="main.js"></script>
+</body>
+<!-- 
+   https://openweathermap.org/ 
+ -->

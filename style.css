@@ -1,3 +1,11 @@
+/*
+
+ Página desarrollada  por Jhonathan O'brian Saavedra web's, subida y alojada en github para que los desarrolladores puedan ver el codigo y usarlo para test. 
+En Inter Tech ayudamos los jóvenes que van empezando. Siguenos en Facebook: https://www.facebook.com/InteraccionTecnologica y 
+github como:https://github.com/intertech20/ 
+
+*/
+
 *{
     margin: 0;
     padding: 0;
@@ -21,7 +29,7 @@ body{
     height: 660px;
     border: 10px solid white;  
     border-radius: 50px;
-    overflow: hidden;   
+    overflow: hidden;
 }
 
 .container_app::before{
@@ -62,13 +70,13 @@ body{
 }
 
 .date{
-display: inline-block;
-padding-top: 3px;
-width: 65%;
-height: 25px;
-text-align: center;
-color: rgb(204, 203, 203);
-font-weight: 600;
+    display: inline-block;
+    padding-top: 3px;
+    width: 65%;
+    height: 25px;
+    text-align: center;
+    color: rgb(204, 203, 203);
+    font-weight: 600;
 }
 
 .location{
@@ -81,29 +89,31 @@ font-weight: 600;
 }
 
 .data_clima_contaniner{
-    width: 1000px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    width: 1000px;
+    height: 280px;
     transition: 2s;
 }
 
 .data_clima_contaniner_item1,
 .data_clima_contaniner_item2,
 .data_clima_contaniner_item3{
-    display: grid;
-   grid-template-columns: 90px 95px 90px;
+   display: grid;
+   grid-template-rows: repeat(9 1fr);
+   padding-left: 12px;
    transition: 2s;
 }
+
 .data_clima_item1,.data_clima_item2,
 .data_clima_item3,.data_clima_item4,
 .data_clima_item5,.data_clima_item6,
 .data_clima_item7,.data_clima_item8,
-.data_clima_item9,.data_clima_item10,
-.data_clima_item11,.data_clima_item12{
-    margin: 10px;
-    width: auto;
-    height: 50px;
-    background: royalblue;
+.data_clima_item9{
+    margin: none;
+    width: 250px;
+    height: 30px;
+
 }
 
 .data_clima_footer{
@@ -127,6 +137,7 @@ font-weight: 600;
     margin: 5px;
     border-radius: 50%;
 }
+
 .item_slider1:hover,
 .item_slider2:hover,
 .item_slider3:hover,
@@ -147,18 +158,57 @@ font-weight: 600;
     position: absolute;
     width:34px;
     height:12px;
-    z-index: 999;
-  
+    z-index: 999;  
 }
 
 .transition1{
-    transform: translateX(0);
+    transform: translateX(-80);
 } 
 
-  .transition2{
+.transition2{
     transform: translateX(-330px);
 }  
 
-  .transition3{
+.transition3{
     transform: translateX(-665px);
 }  
+
+img{
+    width: 10%;
+}
+
+.img_description,p{
+    display: inline-block;
+    margin-top:5px;
+    
+}
+.text_clima_item_left{
+    text-transform: capitalize;
+    float: left;
+}
+.text_clima_item_right{
+    margin-left: 10px;
+    float: right;
+ 
+}
+
+@media (max-width:400px) {
+    .container_app::before{
+        width: 35%; 
+       }
+}
+@media (max-width:300px) {
+    .container_app::before{
+        width: 50px;
+    }
+
+    .data_clima_item1,.data_clima_item2,
+    .data_clima_item3,.data_clima_item4,
+    .data_clima_item5,.data_clima_item6,
+    .data_clima_item7,.data_clima_item8,
+    .data_clima_item9{
+        max-width: 150px;
+        height: 30px;
+        background: royalblue; 
+    }
+}
